@@ -1,3 +1,16 @@
+- [Aide à la décision](#aide---la-d-cision)
+    + [Introduction](#introduction)
+    + [Modèle](#mod-le)
+      - [Actions](#actions)
+      - [Données](#donn-es)
+      - [Coûts](#co-ts)
+      - [Contributions](#contributions)
+      - [Ordre lexicographique](#ordre-lexicographique)
+    + [Formulation du problème](#formulation-du-probl-me)
+      - [Formulation pour résolution avec le simplex](#formulation-pour-r-solution-avec-le-simplex)
+      - [Formulation pour résolution avec une recherche exhaustive (récursive)](#formulation-pour-r-solution-avec-une-recherche-exhaustive--r-cursive-)
+
+
 # Aide à la décision
 
 ### Introduction
