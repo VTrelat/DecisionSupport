@@ -1,17 +1,16 @@
-- [Aide à la décision](#aide---la-d-cision)
-    + [Introduction](#introduction)
-    + [Modèle](#mod-le)
-      - [Actions](#actions)
-      - [Données](#donn-es)
-      - [Coûts](#co-ts)
-      - [Contributions](#contributions)
-      - [Ordre lexicographique](#ordre-lexicographique)
-    + [Formulation du problème](#formulation-du-probl-me)
-      - [Formulation pour résolution avec le simplex](#formulation-pour-r-solution-avec-le-simplex)
-      - [Formulation pour résolution avec une recherche exhaustive (récursive)](#formulation-pour-r-solution-avec-une-recherche-exhaustive--r-cursive-)
-
-
 # Aide à la décision
+
++ [Introduction](#introduction)
++ [Modèle](#mod-le)
+  - [Actions](#actions)
+  - [Données](#donn-es)
+  - [Coûts](#co-ts)
+  - [Contributions](#contributions)
+  - [Ordre lexicographique](#ordre-lexicographique)
++ [Formulation du problème](#formulation-du-probl-me)
+  - [Formulation pour résolution avec le simplex](#formulation-pour-r-solution-avec-le-simplex)
+  - [Formulation pour résolution avec une recherche exhaustive (récursive)](#formulation-pour-r-solution-avec-une-recherche-exhaustive--r-cursive-)
+
 
 ### Introduction
 Ce projet s'inscrit dans le cadre d'un processus d'aide à la décision complexe, visant à résoudre un problème multidimensionnel de sélection d'actions. Pour cela, nous utilisons des concepts mathématiques et des modèles formels pour guider nos choix. L'objectif principal est d'optimiser les critères d'attractivité, de risque d'inondation et d'environnement, tout en respectant une contrainte budgétaire. À travers une représentation matricielle des actions, des données des critères et des coûts, ainsi que des contributions définies, on souhaite trouver la combinaison optimale d'actions. On propose d'abord une formalisation dans le but de mettre en place une résolution à l'aide du simplex, toutefois la résolution n'est faite pour l'instant qu'à travers une implémentation récursive qui s'apparente à une résolution type problème du sac à dos.
