@@ -99,6 +99,7 @@ Pas encore rédigé, cf le code dans [`main.py`](./main.py).
 
 L'idée est de résoudre le problème comme le problème du sac à dos, en prenant en compte qu'une seule des trois variantes peut être choisie pour chaque action. On fait une recherche exhaustive en coupant les branche qui cassent la contrainte de coût et en faisant du backtracking sur l'optimisation des critères (maximisation selon l'ordre lexicographique).
 
+L'arbre d'exécution peut être représenté comme suit (on ne représente que les deux premiers choix car l'arbre devient vite très très grand) :
 
 ```mermaid
 graph TD
@@ -173,6 +174,4 @@ graph TD
   N17 -->|Pas pris| N17_0(( ))
   N18 -->|Pris| N18_1(( ))
   N18 -->|Pas pris| N18_0(( ))
-
-
 ```
