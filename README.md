@@ -1,3 +1,8 @@
+# Aide à la décision
+
+### Introduction
+Ce projet s'inscrit dans le cadre d'un processus d'aide à la décision complexe, visant à résoudre un problème multidimensionnel de sélection d'actions. Pour cela, nous utilisons des concepts mathématiques et des modèles formels pour guider nos choix. L'objectif principal est d'optimiser les critères d'attractivité, de risque d'inondation et d'environnement, tout en respectant une contrainte budgétaire. À travers une représentation matricielle des actions, des données des critères et des coûts, ainsi que des contributions définies, on souhaite trouver la combinaison optimale d'actions. On propose d'abord une formalisation dans le but de mettre en place une résolution à l'aide du simplex, toutefois la résolution n'est faite pour l'instant qu'à travers une implémentation récursive qui s'apparente à une résolution type problème du sac à dos.
+
 ### Modèle
 
 #### Actions
@@ -90,5 +95,84 @@ $$
 $$
 
 #### Formulation pour résolution avec une recherche exhaustive (récursive)
+Pas encore rédigé, cf le code dans [`main.py`](./main.py).
 
-Pas encore rédigé, cf le code dans [`main.py`](./main.py)
+L'idée est de résoudre le problème comme le problème du sac à dos, en prenant en compte qu'une seule des trois variantes peut être choisie pour chaque action. On fait une recherche exhaustive en coupant les branche qui cassent la contrainte de coût et en faisant du backtracking sur l'optimisation des critères (maximisation selon l'ordre lexicographique).
+
+
+```mermaid
+graph TD
+  R(( ))
+  A11((A11))
+  A12((A12))
+  A13((A13))
+
+  R --> A11
+  R --> A12
+  R --> A13
+
+  A11 -->|Pris| A11_1(( ))
+  A11 -->|Pas pris| A11_0(( ))
+  A12 -->|Pris| A12_1(( ))
+  A12 -->|Pas pris| A12_0(( ))
+  A13 -->|Pris| A13_1(( ))
+  A13 -->|Pas pris| A13_0(( ))
+
+  A11_1 --> N1((A21))
+  A11_1 --> N2((A22))
+  A11_1 --> N3((A23))
+  A11_0 --> N4((A21))
+  A11_0 --> N5((A22))
+  A11_0 --> N6((A23))
+  A12_1 --> N7((A21))
+  A12_1 --> N8((A22))
+  A12_1 --> N9((A23))
+  A12_0 --> N10((A21))
+  A12_0 --> N11((A22))
+  A12_0 --> N12((A23))
+  A13_1 --> N13((A21))
+  A13_1 --> N14((A22))
+  A13_1 --> N15((A23))
+  A13_0 --> N16((A21))
+  A13_0 --> N17((A22))
+  A13_0 --> N18((A23))
+
+  N1 -->|Pris| N1_1(( ))
+  N1 -->|Pas pris| N1_0(( ))
+  N2 -->|Pris| N2_1(( ))
+  N2 -->|Pas pris| N2_0(( ))
+  N3 -->|Pris| N3_1(( ))
+  N3 -->|Pas pris| N3_0(( ))
+  N4 -->|Pris| N4_1(( ))
+  N4 -->|Pas pris| N4_0(( ))
+  N5 -->|Pris| N5_1(( ))
+  N5 -->|Pas pris| N5_0(( ))
+  N6 -->|Pris| N6_1(( ))
+  N6 -->|Pas pris| N6_0(( ))
+  N7 -->|Pris| N7_1(( ))
+  N7 -->|Pas pris| N7_0(( ))
+  N8 -->|Pris| N8_1(( ))
+  N8 -->|Pas pris| N8_0(( ))
+  N9 -->|Pris| N9_1(( ))
+  N9 -->|Pas pris| N9_0(( ))
+  N10 -->|Pris| N10_1(( ))
+  N10 -->|Pas pris| N10_0(( ))
+  N11 -->|Pris| N11_1(( ))
+  N11 -->|Pas pris| N11_0(( ))
+  N12 -->|Pris| N12_1(( ))
+  N12 -->|Pas pris| N12_0(( ))
+  N13 -->|Pris| N13_1(( ))
+  N13 -->|Pas pris| N13_0(( ))
+  N14 -->|Pris| N14_1(( ))
+  N14 -->|Pas pris| N14_0(( ))
+  N15 -->|Pris| N15_1(( ))
+  N15 -->|Pas pris| N15_0(( ))
+  N16 -->|Pris| N16_1(( ))
+  N16 -->|Pas pris| N16_0(( ))
+  N17 -->|Pris| N17_1(( ))
+  N17 -->|Pas pris| N17_0(( ))
+  N18 -->|Pris| N18_1(( ))
+  N18 -->|Pas pris| N18_0(( ))
+
+
+```
