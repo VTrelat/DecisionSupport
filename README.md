@@ -91,4 +91,4 @@ $$
 
 #### Formulation pour résolution avec une recherche exhaustive (récursive)
 
-Pas encore rédigé, cf le code dans `./main.py`
+Pas encore rédigé, cf le code dans [`main.py`](./main.py)
